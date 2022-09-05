@@ -731,6 +731,10 @@ span.beatmap-mapper {
   margin-bottom: 12px;
 }
 
+.score-button-container {
+  position:relative;
+}
+
 .score-button {
   transition: background-color 0.15s;
   background:none;
@@ -744,5 +748,9 @@ span.beatmap-mapper {
 
 .score-button:hover {
   background-color: rgba(0,0,0,0.5);
+}
+
+.dropdown {
+  position:absolute;
   
 }
