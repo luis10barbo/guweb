@@ -739,6 +739,7 @@ span.beatmap-mapper {
   color:white;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  cursor:pointer;
 }
 
 .score-button:hover {
