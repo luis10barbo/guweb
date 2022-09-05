@@ -345,6 +345,7 @@ async def profile_select(id):
 async def leaderboard(mode='std', sort='pp', mods='vn', state='global'):
     return await render_template('leaderboard.html', mode=mode, sort=sort, mods=mods, state=state)
 
+@frontend.route('/score')
 @frontend.route('/score/<score_id>')
 async def score(score_id='') :
     return await render_template('score.html', scoreId=score_id)
