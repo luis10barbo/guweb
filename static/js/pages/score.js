@@ -23,6 +23,7 @@ new Vue({
                 // this.$set(this, 'load', false);
             });
             window.history.replaceState('', document.title, `/score/${this.scoreId}`);
-        }
-    }
+        },
+    },
+    computed: {}
 })
