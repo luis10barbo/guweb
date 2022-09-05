@@ -749,15 +749,3 @@ span.beatmap-mapper {
 .score-button:hover {
   background-color: rgba(0,0,0,0.5);
 }
-
-.dropdown {
-  position:absolute;
-  left: 0;
-
-  width: min-content;
-  height: min-content;
-
-  transform: translateY(100%);
-
-  background-color: rgba(0, 0, 0, 0.04);
-}
