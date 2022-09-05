@@ -752,5 +752,12 @@ span.beatmap-mapper {
 
 .dropdown {
   position:absolute;
-  
+  left: 0;
+
+  width: min-content;
+  height: min-content;
+
+  transform: translateY(100%);
+
+  background-color: rgba(0, 0, 0, 0.04);
 }
