@@ -4,7 +4,7 @@ new Vue({
     data() {
         return {
             scoreId : scoreId,
-            scoreInfo : {}
+            score : {}
         }
     },
     created() {
@@ -22,6 +22,7 @@ new Vue({
                 this.scoreInfo = res.data.leaderboard;
                 // this.$set(this, 'load', false);
             });
+
             window.history.replaceState('', document.title, `/score/${this.scoreId}`);
         },
     },
