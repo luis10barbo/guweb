@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Score scoreid {% endblock %}
+
+{% block header %}
+<script src="/static/js/asserts/vue.js"></script>
+<script src="/static/js/asserts/vue-axios.js"></script>
+
+<script>
+    var scoreId = "{{ scoreId }}";
+</script>
+
+<link rel="stylesheet" href="/static/css/pages/score.css">
+{% endblock %}
+
+{% block content %}
+<script src="/static/js/pages/score.js"></script>
+
+
+
+{% endblock %}
