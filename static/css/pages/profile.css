@@ -730,3 +730,12 @@ span.beatmap-mapper {
   transition: 0.2s ease;
   margin-bottom: 12px;
 }
+
+.score-button {
+  transition: background-color 0.15s;
+}
+
+.score-button:hover {
+  background-color: rgba(0,0,0,0.5);
+  padding: 0.25rem;
+}
