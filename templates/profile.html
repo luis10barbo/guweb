@@ -224,7 +224,7 @@
                                 <td>Global rank</td>
                                 <td class="right-aligned">
                                     <span id="global-rank">
-                                        <% '#' + data.stats[`rank_global_${modegulag}`] %>
+                                        <% '#' + data.stats['out'][`${modegulag}`]['rank']%>
                                     </span>
                                 </td>
                             </tr>
@@ -232,7 +232,7 @@
                                 <td>Country rank</td>
                                 <td class="right-aligned">
                                     <span id="country-rank">
-                                        <% '#' + data.stats[`rank_country_${modegulag}`] %>
+                                        <% '#' + data.stats['out'][`${modegulag}`]['country_rank']%>
                                     </span>
                                 </td>
                             </tr>
