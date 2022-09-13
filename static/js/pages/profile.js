@@ -295,7 +295,8 @@ new Vue({
     },
     computed: {
         countryString: function () {
-            return window.flags[this.data.stats.info.country]
+            console.log(this.flags[this.data.stats.info.country], this.flags)
+            return this.flags[this.data.stats.info.country]
         }
 
     }
