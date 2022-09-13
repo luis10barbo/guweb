@@ -3,9 +3,11 @@ new Vue({
     delimiters: ["<%", "%>"],
     data() {
         return {
+            flags: window.flags,
             data: {
                 stats: {
                     out: [{}],
+                    info: [{}],
                     load: true
                 },
                 grades: {},
@@ -68,6 +70,7 @@ new Vue({
                 })
                 .then(res => {
                     this.$set(this.data.stats, 'out', res.data.player.stats);
+                    this.$set(this.data.stats, 'info', res.data.player.info);
                     this.data.stats.load = false;
                 });
         },
@@ -290,5 +293,10 @@ new Vue({
             }
         },
     },
-    computed: {}
+    computed: {
+        countryString: function () {
+            return window.flags[this.data.stats.info.country]
+        }
+
+    }
 });
