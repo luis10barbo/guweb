@@ -229,7 +229,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>{{ countryString() }}</td>
+                                <td><% countryString() %></td>
                                 <td class="right-aligned">
                                     <span id="country-rank">
                                         <% '#' + data.stats['out'][`${modegulag}`]['country_rank']%>
@@ -351,6 +351,7 @@
         </div>
     </div>
 </div>
+<script src="/static/js/asserts/vue-flags.js"></script>
 {% endblock %}
 
 {% block bottom %}
