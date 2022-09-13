@@ -292,12 +292,13 @@ new Vue({
                     return 3;
             }
         },
-    },
-    computed: {
         countryString: function () {
             console.log(this.flags[this.data.stats.info.country], this.flags)
             return this.flags[this.data.stats.info.country]
         }
+    },
+    computed: {
+        
 
     }
 });
