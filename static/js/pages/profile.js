@@ -3,6 +3,7 @@ new Vue({
     delimiters: ["<%", "%>"],
     data() {
         return {
+            flags: window.flags,
             data: {
                 stats: {
                     out: [{}],
