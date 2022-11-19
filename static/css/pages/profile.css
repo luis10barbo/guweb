@@ -117,8 +117,13 @@
 }
 
 .profile-flag {
-  height: 24px;
-  margin-right: 6px;
+  width:2.8rem;
+  height: 2rem;
+  /* margin-right: 6px; */
+  background-size: contain;
+  cursor:pointer;
+
+  border:none;
 }
 
 .is-striped {
@@ -598,6 +603,46 @@ span.beatmap-mapper {
 
 .mods-shorttext {
   display: none;
+}
+
+.ranks {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.ranks > a {
+  width:fit-content
+}
+
+.flag-dropdown {
+  margin-top: -45px;
+  margin-left: -38px;
+  z-index:10;
+}
+.flag-dropdown, .noUi-tooltip {
+  background-color: hsl(var(--main), 15%, 5%) !important;
+  filter: opacity(0.95);
+  border-radius: 4px;
+  padding: 5px;
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  padding-left: 14px;
+  padding-right: 14px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s visibility, 0.3s opacity;
+  min-width: 110px;
+  max-width: 143px;
+  width: max-content;
+  text-align: center;
+  font-weight: 600;
+  font-style: normal;
+}
+.profile-flag:hover>.flag-dropdown {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1255px) {
