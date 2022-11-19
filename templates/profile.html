@@ -125,6 +125,7 @@
 
 {% block header %}
 <script src="/static/js/asserts/vue.js"></script>
+<script src="/static/js/asserts/vue-flags.js"></script>
 <script src="/static/js/asserts/vue-axios.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 <link rel="stylesheet" href="/static/css/pages/profile.css">
@@ -132,6 +133,7 @@
 <script>
     
     var userid = Number("{{ user['id'] }}"); //For text editor doesn't dizzy lmao
+    var user = "{{ user }}"
     var mode = '{{ mode }}';
     var mods = '{{ mods }}';
     var domain = "{{ domain() }}";
@@ -145,8 +147,15 @@
             <div class="info-block">
                 <h1 class="title">
                     <p class="ranks">
-                        <img src="/static/images/flags/{{ user['country']|upper }}.png" class="profile-flag">
+                        <a :href="`https://${domain}/leaderboard/${mode}/pp/${mods}/{{user['country']}}`">
+                            <button :style="`background-image: url('/static/images/flags/{{ user['country']|upper }}.png')`" class="profile-flag">
+                                <div class="flag-dropdown">
+                                    <% flags["{{user['country']|upper}}"] %>
+                                </div>
+                            </button>
+                        </a>   
                         <span class="bgf">{{ user['name'] }}</span>
+                    
                     </p>
                 </h1>
                 <transition name="fade">
